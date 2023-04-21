@@ -1,0 +1,19 @@
+{
+    "name": "kercode07/01projet_final",
+    "description": "Mon projet Soli'56",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "melissa099",
+            "email": "mel_l_d@outlook.com"
+        }
+    ]
+}
