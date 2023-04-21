@@ -10,6 +10,7 @@ Lorsque l’utilisateur choisi une catégorie, il accède aux services dépendan
 souhaite plus d’information sur un service, via le lien, il accède aux détails du service choisi.
 
 
+
 2. Présentation de la partie développement
 
 - J’ai utilisé une base de données ‘Soli56’, réalisé à partir d’un MCD sur l’application Looping. Cette
