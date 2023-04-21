@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+#Interdire l'acces aux dossiers :
+RewriteRule ^(controllers|models|views|database) - [R=403,L]
+
+<FilesMatch "^.env$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
