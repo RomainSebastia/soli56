@@ -1,0 +1,579 @@
+@font-face {
+  font-family: 'verdana';
+  src: url(../font/verdana-webfont.woff2),
+    url(../font/verdana-webfont.woff);
+}
+
+
+/* Reset des marges */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/* Suppression de styles sur les liens */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* Déclaration des variables de mise en forme */
+:root {
+  --vert: rgba(3, 69, 73, 1);
+  --jaune: rgba(253, 163, 8, 1);
+  --blanc: rgba(255, 255, 255, 1);
+  --noir: rgba(0, 0, 0, 1);
+  --or: rgba(253, 163, 8, 0.5);
+  --titre: clamp(1.1rem, 0.7222rem + 0.8889vw, 1.5rem);
+  --texteAccueil: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+  --container: clamp(1rem, 0.8778rem + 0.7111vw, 1.1rem);
+
+}
+
+
+
+/* =============================== Menu de navigation ================================== */
+
+/* Mise en forme de la barre de navigation */
+header {
+  width: 100%;
+  max-height: 60px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(45deg, #034549, #067f85, #09a1a9, #034549);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar h1 a {
+  text-decoration: none;
+  margin: 10px;
+  margin-left: 0px;
+  font-family: 'verdana';
+  align-items: center;
+  color: var(--jaune);
+  font-size: var(--titre);
+  letter-spacing: 5px;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu img {
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+  width: 30px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: var(--vert);
+  display: none;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu li:hover {
+  background-color: var(--or);
+  /* background-color: #f98f04db; */
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--jaune);
+  text-transform: capitalize;
+  font-family: 'verdana';
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+}
+
+
+
+
+/* ========================================= ACCUEIL ======================================= */
+
+/* Mise en forme de la page d'accueil */
+.accueil {
+  margin: 0;
+  padding: 0;
+  background: url(../../data/images/accueil/accueil.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /* pour les anciens Chrome et Safari */
+   background-size: cover; /* version standardisée */  
+}
+
+
+.accueil img {
+  color: var(--blanc);
+}
+
+.entrez {
+  text-align: center;
+}
+
+.entrez button {
+  background-color: var(--jaune);
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.entrez button a {
+  text-decoration: none;
+  color: var(--vert);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.accueil #resume{
+  padding-top : 100px;
+  padding-bottom : 50px;
+}
+
+.accueil #resume p {
+  text-align: center;
+  padding: 20px;
+  font-family: "verdana";
+  color: var(--blanc);
+  font-size: var(--texteAccueil);
+}
+
+
+
+
+/* ======================================= CONTAINER ================================= */
+/* Mise en forme des noms et des icônes des catégories */
+.container {
+  margin: 20px;
+  font-family: "verdana";
+  font-size: var(--container);
+}
+
+
+/* ======================================= CATEGORIES ================================= */
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .category {
+  display: flex;
+  justify-content: center;
+}
+
+
+.container .category a button {
+  width: 200px;
+  height: 150px;
+  padding: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--vert);
+  text-decoration: none;
+  list-style-type: none;
+  font-size: --var(container);
+  text-transform: uppercase;
+}
+
+
+.container .category img {
+  width: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* ======================================= SERVICES ================================= */
+.service {
+  margin-top: 30px;
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.1rem);
+  margin: 100px;
+}
+
+.service p a {
+  text-decoration: none;
+  color: var(--vert);
+  font-weight: bold;
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.1rem);
+}
+
+.service p {
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.1rem);
+}
+
+
+
+
+/* ======================================= MON SERVICE ================================= */
+.unService {
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.1rem);
+  margin: 100px;
+}
+
+
+.unService #nom {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--vert);
+}
+
+.unService #adresse {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.unService #tel,
+#mail,
+#ouverture {
+  margin-bottom: 20px;
+}
+
+.unService #site a {
+  text-decoration: none;
+  color: var(--noir);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.unService #photo {
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+
+
+/* ===================================== ERREUR ============================= */
+#erreur h3,
+a {
+  text-align: center;
+  margin-top: 60px;
+  text-decoration: none;
+  color: var(--noir);
+  font-size: var(--texteAccueil);
+}
+
+
+
+/* ===================================== RGPD =============================== */
+/* Mentions légales et Politique de confidentialité */
+
+.mentions,
+.politique {
+  color: var(--noir);
+  margin: 150px 150px;
+  text-align: justify;
+}
+
+.mentions h5,
+.politique h5 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 0.8778rem + 0.7111vw, 1.5rem);
+  font-family: "verdana";
+}
+
+.mentions h4,
+.mentions p,
+.politique h4,
+.politique p,
+.politique ul li {
+  font-family: "verdana";
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+}
+
+
+.politique h4,
+.mentions h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.politique a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--noir);
+}
+
+
+
+
+/* =================================== FOOTER ============================== */
+
+/* Mise en forme du footer */
+
+/* Couleur de fond */
+footer {
+  /* width: 100%; */
+  background-color: var(--vert);
+}
+
+/* disposition du menu footer  */
+#menuFooter {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 3fr;
+  padding-top: 10px;
+}
+
+#leftFooter a {
+  list-style-type: none;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: 'verdana';
+  text-align: left;
+  color: var(--jaune);
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+}
+
+#leftFooter p {
+  margin-top: 10px;
+}
+
+#rightFooter p {
+  margin-top: 10px;
+  font-family: 'verdana';
+  text-align: left;
+  color: var(--jaune);
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+}
+
+#copyright {
+  font-family: 'verdana';
+  text-align: center;
+  color: var(--jaune);
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-size: clamp(1rem, 0.8778rem + 0.7111vw, 1.2rem);
+}
+
+
+
+
+/* ==================================== Responsive =============================== */
+
+
+/* Version mobile */
+@media screen and (max-width: 600px) {
+  
+  .container, .accueil {
+    min-height: 600px;
+  }
+
+  .entrez button {
+    padding: 10px 0px;
+    width: 25%;
+  }
+
+  .entrez button a {
+    font-size: 1em;
+  }
+
+  .accueil img {
+    display: block;
+    width: 25%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+    padding-right: 30px;
+  }
+
+  .unService img {
+    width: 50%;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .container .category {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container .category a button {
+    width: 180px;
+    height: 100px;
+  }
+
+}
+
+
+
+/* Version tablette */
+@media screen and (max-width: 768px) and (min-width:600px) {
+
+  .container, .accueil {
+    min-height: 800px;
+  }
+
+
+  .entrez button {
+    padding: 15px 0px;
+    width: 23%;
+  }
+
+  .entrez button a {
+    font-size: 1.1em;
+    padding: 16px;
+  }
+
+
+
+  .accueil img {
+    display: block;
+    width: 20%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+    padding-right: 30px;
+  }
+
+  .unService img {
+    width: 50%;
+  }
+
+  .container .category a button {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+/* Version Laptop */
+@media screen and (max-width:992px) and (min-width:768px) {
+
+  .container, .accueil {
+    min-height: 1000px;
+  }
+  
+  .entrez button {
+    padding: 18px 0px;
+    width: 21%;
+  }
+
+  .entrez button a {
+    font-size: 1.2em;
+    padding: 18px;
+  }
+
+  .accueil img {
+    display: block;
+    width: 15%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+    padding-right: 25px;
+  }
+
+  .unService img {
+    width: 50%;
+  }
+
+  .container .category a button {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+
+
+/* Version large */
+@media screen and (min-width:992px) {
+
+
+  .container, .accueil {
+    min-height: 1200px;
+  }
+
+
+  .entrez button {
+    width: 20%;
+    padding: 20px 0px;
+  }
+
+  .entrez button a {
+    font-size: 1.3em;
+    padding: 20px;
+  }
+
+  .accueil img {
+    display: block;
+    width: 15%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: auto;
+    padding-right: 60px;
+  }
+
+.unService img {
+    width: 50%;
+  }
+
+  .container .category a button {
+    width: 180px;
+    height: 130px;
+  }
+
+
+
+
+}
